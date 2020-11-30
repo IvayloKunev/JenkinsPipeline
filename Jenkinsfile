@@ -2,14 +2,14 @@ pipeline {
     agent any
     tools {
         maven "MAVEN_HOME"
-      
+
     }
     stages
             {
                 stage('docker-compose UP')
                         {
                             steps {
-                                sh ("docker ps -a")
+                                sh ("/usr/local/bin/docker ps -a")
 
                             }
                         }
