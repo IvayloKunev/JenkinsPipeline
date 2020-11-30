@@ -5,7 +5,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                echo "After"
+                                sh ("pwd")
                             }
                         }
                 stage('Executing Tests')
