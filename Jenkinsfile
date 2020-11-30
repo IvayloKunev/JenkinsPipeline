@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        docker "docker_home"
+    }
     stages
             {
                 stage('docker-compose UP')
