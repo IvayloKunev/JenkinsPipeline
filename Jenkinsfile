@@ -22,7 +22,7 @@ pipeline {
                 stage('docker-compose DOWN')
                         {
                             steps {
-                                echo "Testing the Project.........."
+                                sh ("/usr/local/bin/docker stop \$(docker ps -a -q)")
                             }
                         }
             }
