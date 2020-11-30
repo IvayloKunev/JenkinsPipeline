@@ -9,7 +9,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                sh ("/usr/local/bin/docker ps -a")
+                                sh ("docker ps -a")
 
                             }
                         }
