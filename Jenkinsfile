@@ -5,7 +5,8 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                sh ("pwd")
+                                sh ("docker compose -f docker-compose.yml")
+
                             }
                         }
                 stage('Executing Tests')
