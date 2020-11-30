@@ -5,7 +5,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                sh ("docker compose -f docker-compose.yml")
+                                sh ("docker ps -a")
 
                             }
                         }
