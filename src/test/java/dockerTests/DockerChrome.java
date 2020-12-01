@@ -21,12 +21,6 @@ public class DockerChrome {
         driver.get("https://www.google.com");
         System.out.println("Title is: " + driver.getTitle());
 
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         driver.quit();
     }
 
