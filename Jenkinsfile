@@ -19,7 +19,7 @@ pipeline {
                 stage('Executing Tests')
                         {
                             steps {
-                                echo "Testing the Project.........."
+                                sh"mvn -Dtest=DockerChrome test"
                             }
                         }
                 stage('docker-compose DOWN')
