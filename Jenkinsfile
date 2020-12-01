@@ -12,6 +12,8 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
+                                sh("docker stop jenkiinspipelinekunata_firefox_1 jenkiinspipelinekunata_chrome_1 jenkiinspipelinekunata_hub_1")
+                                sh("docker rm jenkiinspipelinekunata_firefox_1 jenkiinspipelinekunata_chrome_1 jenkiinspipelinekunata_hub_1")
                                 sh("docker-compose -f docker-compose.yml up -d")
 
                             }
