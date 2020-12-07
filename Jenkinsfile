@@ -12,8 +12,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                docker stop $"(docker ps -a -q)"
-                                docker rm $"(docker ps -a -q)"
+                                sh("stopAllContainers.sh")
                                 sh("docker-compose -f docker-compose.yml up -d")
 
                             }
