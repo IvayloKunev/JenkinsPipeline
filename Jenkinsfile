@@ -12,6 +12,8 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
+                                sh ('docker ps -f name=jenkiinspipelinekunata_hub_1 -q | xargs --no-run-if-empty docker container stop')
+                                sh ('docker container ls -a -fname=jenkiinspipelinekunata_hub_1 -q | xargs -r docker container rm')
                                 sh("docker-compose -f docker-compose.yml up -d")
 
                             }
