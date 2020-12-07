@@ -12,7 +12,7 @@ pipeline {
                 stage('docker-compose UP')
                         {
                             steps {
-                                sh("stopAllContainers.sh")
+                                sh("./stopAllContainers.sh")
                                 sh("docker-compose -f docker-compose.yml up -d")
 
                             }
